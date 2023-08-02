@@ -9,7 +9,7 @@ public class Main {
         basket.add("soup", 20, 2, 15);
         basket.print("rfr");
 
-        System.out.println("вес " + basket.getTotalWeight());
+        System.out.println("вес общий " + basket.getTotalWeight());
         System.out.println("стоимость "  + basket.getTotalPrice());
 
     }

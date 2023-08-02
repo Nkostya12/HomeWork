@@ -5,7 +5,7 @@ public class Basket {
     private int totalPrice = 0;
     private int limit;
 
-    private double totalWeight = 0;
+    private  double totalWeight = 0;
 
     public Basket() {
         increaseCount(1);
@@ -18,24 +18,15 @@ public class Basket {
         this.limit = limit;
     }
 
-
-
     public Basket(String items, int totalPrice) {
         this();
         this.items = this.items + items;
         this.totalPrice = totalPrice;
     }
 
-    public Basket(double totalWeight){
-        this();
-        this.totalWeight = totalWeight;
-    }
-
     public static int getCount() {
         return count;
     }
-
-
 
     public static void increaseCount(int count) {
         Basket.count = Basket.count + count;
@@ -45,7 +36,7 @@ public class Basket {
         add(name, price, 1);
     }
 
-    public void add(String name, int price, int count, double weight) {
+    public void add(String name, int price, int count) {
         boolean error = false;
         if (contains(name)) {
             error = true;
@@ -61,17 +52,13 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " шт. - " + price + " рублей " + weight + "кг.";
+                count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
-        totalWeight = totalWeight + weight * count;
     }
 
     public void clear() {
         items = "";
         totalPrice = 0;
-    }
-    public void add(String name, int price, int count){
-        add(name,price,1,0);
     }
 
     public int getTotalPrice() {
@@ -82,9 +69,6 @@ public class Basket {
         return items.contains(name);
     }
 
-
-
-
     public void print(String title) {
         System.out.println(title);
         if (items.isEmpty()) {
@@ -92,8 +76,16 @@ public class Basket {
         } else {
             System.out.println(items);
         }
+
+
     }
-    public double getTotalWeight() {
+    public void add(String name, int price, int count, double weight){
+        add(name,price,count);
+        totalWeight = totalWeight + weight * count;
+        items = items + " рублей " + weight + " кг.";
+    }
+
+    public double getTotalWeight(){
         return totalWeight;
     }
 }
