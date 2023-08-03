@@ -1,4 +1,5 @@
-public class Basket {
+public class
+Basket {
 
     private static int count = 0;
     private String items = "";
@@ -82,7 +83,7 @@ public class Basket {
     public void add(String name, int price, int count, double weight){
         add(name,price,count);
         totalWeight = totalWeight + weight * count;
-        items = items + " рублей " + weight + " кг.";
+
     }
 
     public double getTotalWeight(){
