@@ -30,13 +30,13 @@ public class Elevator {
         }
         if (currentFloor < floor){
             while (currentFloor != floor){
-                currentFloor ++;
+                moveUP();
                 System.out.println(currentFloor);
 
             }
         }else if(currentFloor > floor){
             while (currentFloor != floor){
-                currentFloor --;
+                moveDown();
                 System.out.println(currentFloor);
 
             }

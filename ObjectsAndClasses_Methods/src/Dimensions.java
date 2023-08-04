@@ -1,23 +1,23 @@
 public class Dimensions {
-    private final int shirina;
-    private final int vusota;
+    private final int width;
+    private final int height;
 
-    private final int dlina;
+    private final int length;
 
-    public Dimensions(int shirina, int vusota, int dlina) {
-        this.shirina = shirina;
-        this.vusota = vusota;
-        this.dlina = dlina;
+    public Dimensions(int width, int height, int length) {
+        this.width = width;
+        this.height = height;
+        this.length = length;
     }
 
-    public int obuom (int shirina, int vusota, int dlina) {
-        return shirina * vusota * dlina;
+    public int obuom (int width, int height, int length) {
+        return height * height * length;
     }
 
     @Override
     public String toString() {
-        return "\n" + "высота: " + vusota +"\n"+
-                "ширина: " + shirina + "\n" +
-                "длина: " + dlina + "\n";
+        return "\n" + "высота: " + height +"\n"+
+                "ширина: " + width + "\n" +
+                "длина: " + length + "\n";
     }
 }
