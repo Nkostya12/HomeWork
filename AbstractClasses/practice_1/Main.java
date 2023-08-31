@@ -1,8 +1,6 @@
 package AbstractClasses.practice_1;
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class Main {
@@ -47,7 +45,7 @@ public class Main {
         System.out.println(company.getTopSalaryStaff(15));
         System.out.println(company.getLowestSalaryStaff(30));
 
-        System.out.println(company.getSizeEmployee());
+
 
 
     }
