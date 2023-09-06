@@ -15,6 +15,13 @@ public class CustomerStorage {
         final int INDEX_PHONE = 3;
 
         String[] components = data.split("\\s+");
+        if (components.length != 4) {
+            throw new IllegalArgumentException("Line is't correct!");
+        } else if (!components[INDEX_PHONE].matches("[+?]\\d+")){
+            throw new IllegalArgumentException("Pnone number is not correct");
+        }else  if (!components[INDEX_EMAIL].matches("[\\w.]+@\\w+.\\w+")) {
+            throw new IllegalArgumentException("Email is not correct");
+        }
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
         storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
     }

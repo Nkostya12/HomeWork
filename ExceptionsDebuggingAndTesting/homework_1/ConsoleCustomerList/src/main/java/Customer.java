@@ -19,6 +19,7 @@ public class Customer {
         this.name = name;
         this.phone = phone;
         this.email = email;
+
     }
 
     public String toString() {
