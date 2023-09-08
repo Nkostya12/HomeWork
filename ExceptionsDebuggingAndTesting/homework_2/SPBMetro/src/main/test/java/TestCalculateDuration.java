@@ -10,7 +10,17 @@ public class TestCalculateDuration extends TestCase {
 
     public StationIndex stationIndex = new StationIndex();
 
-    protected List<Station> route;
+    protected List<Station> routeTwoConnection = new ArrayList<Station>();
+
+    protected List<Station> routeOnTheLine = new ArrayList<Station>();
+
+    protected List<Station> routeOneConnection = new ArrayList<Station>();
+
+    protected List<Station> routeTwoConnectionExpected = new ArrayList<Station>();
+
+    protected List<Station> routeOnTheLineExpected = new ArrayList<Station>();
+
+    protected List<Station> routeOneConnectionExpected = new ArrayList<Station>();
 
 
     @Override
@@ -48,23 +58,46 @@ public class TestCalculateDuration extends TestCase {
         stationIndex.addStation(station6);
 
 
-
         stationIndex.addConnection(Arrays.asList(station2, station3));
         stationIndex.addConnection(Arrays.asList(station4, station5));
 
-        route = routeCalculator.getShortestRoute(station1, station6);
+        routeTwoConnection = routeCalculator.getShortestRoute(station1, station6);
 
+        routeOnTheLine = routeCalculator.getShortestRoute(station1, station2);
 
+        routeOneConnection = routeCalculator.getShortestRoute(station1, station3);
+
+        routeOnTheLineExpected.add(station1);
+        routeOnTheLineExpected.add(station2);
+
+        routeOneConnectionExpected.add(station1);
+        routeOneConnectionExpected.add(station2);
+        routeOneConnectionExpected.add(station3);
+
+        routeTwoConnectionExpected.add(station1);
+        routeTwoConnectionExpected.add(station2);
+        routeTwoConnectionExpected.add(station3);
+        routeTwoConnectionExpected.add(station4);
+        routeTwoConnectionExpected.add(station5);
+        routeTwoConnectionExpected.add(station6);
     }
 
     public void testCalculateDuration() {
-        System.out.println(route);
-        double actual = RouteCalculator.calculateDuration(route);
+        double actual = RouteCalculator.calculateDuration(routeTwoConnection);
         double expected = 14.5;
         assertEquals(expected, actual);
     }
 
     public void testGetRouteOnTheLine() {
-
+        assertEquals(routeOnTheLineExpected, routeOnTheLine);
     }
+
+    public void testGetRouteWithOneConnection() {
+        assertEquals(routeOneConnectionExpected, routeOneConnection);
+    }
+
+    public void testGetRouteWithTwoConnections() {
+        assertEquals(routeTwoConnectionExpected, routeTwoConnection);
+    }
+
 }

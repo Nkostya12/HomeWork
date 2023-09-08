@@ -20,17 +20,15 @@ public class RouteCalculator {
         if (route != null) {
             return route;
         }
-
         route = getRouteWithOneConnection(from, to);
-        if (route == null) {
+        if (!route.isEmpty()) {
             return route;
         }
 
-            route = getRouteWithTwoConnections(from, to);
-        if (route != null){
-            return route;
-        }
-       return route;
+        route = getRouteWithTwoConnections(from, to);
+
+
+        return route;
     }
 
 
@@ -40,8 +38,7 @@ public class RouteCalculator {
         for (int i = 0; i < route.size(); i++) {
             Station station = route.get(i);
             if (i > 0) {
-                duration += previousStation.getLine().equals(station.getLine()) ?
-                        INTER_STATION_DURATION : INTER_CONNECTION_DURATION;
+                duration += previousStation.getLine().equals(station.getLine()) ? INTER_STATION_DURATION : INTER_CONNECTION_DURATION;
             }
             previousStation = station;
         }
@@ -68,8 +65,7 @@ public class RouteCalculator {
                 route.add(station);
             }
 
-            if ((direction == 1 && station.equals(to)) ||
-                    (direction == -1 && station.equals(from))) {
+            if ((direction == 1 && station.equals(to)) || (direction == -1 && station.equals(from))) {
                 break;
             }
         }
@@ -134,8 +130,7 @@ public class RouteCalculator {
 
         for (Station srcStation : fromLineStations) {
             for (Station dstStation : toLineStations) {
-                List<Station> connectedLineRoute =
-                        getRouteViaConnectedLine(srcStation, dstStation);
+                List<Station> connectedLineRoute = getRouteViaConnectedLine(srcStation, dstStation);
                 if (connectedLineRoute == null) {
                     continue;
                 }
