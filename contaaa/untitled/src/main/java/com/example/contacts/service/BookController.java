@@ -1,15 +1,25 @@
-package com.example.contacts;
+package com.example.contacts.service;
+
+
 
 import com.example.contacts.data.Contact;
 import com.example.contacts.data.DataContacts;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
-@Component
+@Service
 public class BookController {
+
+
+
+    @Value("${app.BookController.pathInit}")
+    private String pathInit;
 
 
     private DataContacts dataContacts;
@@ -45,6 +55,22 @@ public class BookController {
             System.out.println("экспорт завершен");
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void init() {
+        if (pathInit != null) {
+            try {
+                List<String> files = Files.readAllLines(Path.of(pathInit));
+                for (String line : files) {
+                    String[] lineSeparator = line.split(";");
+                    dataContacts.getContactList().add(new Contact(lineSeparator[0], lineSeparator[1], lineSeparator[2]));
+
+                }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

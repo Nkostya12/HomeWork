@@ -4,19 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb05fe8-c41c-4505-8b74-33566a6aeeef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/BockCheckConsole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/data/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/data/DataContacts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/contacts/ContactsApplicationTests.java" afterDir="false" />
+    <list default="true" id="5fb05fe8-c41c-4505-8b74-33566a6aeeef" name="Changes" comment="q">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/config/InitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/config/ProdConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/initModule/DefInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/initModule/InitInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/initModule/ProfileChege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/initModule/RunInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/service/ComandRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/ContactList/Contacts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/application-init.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Contacts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Contacts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/contacts/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/contacts/BockCheckConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/service/BockCheckConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/contacts/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/service/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/contacts/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/contacts/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/filesAllbook/allContact.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/filesAllbook/allContact.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/contacts/ContactsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../contact" beforeDir="false" afterPath="$PROJECT_DIR$/../../contact" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -42,13 +54,23 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Константи/IdeaProjects/HomeWork/contaaa/untitled&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Константи/IdeaProjects/HomeWork/contaaa/untitled/src/resources&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Константи\IdeaProjects\HomeWork\contaaa\untitled\src\resources" />
       <recent name="C:\Users\Константи\IdeaProjects\HomeWork\contaaa\untitled" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.contacts" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -56,7 +78,7 @@
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.contacts.*" />
+          <option name="PATTERN" value="com.example.contacts.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,6 +101,35 @@
       <option name="presentableId" value="Default" />
       <updated>1702934720602</updated>
     </task>
+    <task id="LOCAL-00001" summary="q">
+      <created>1703192341946</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703192341946</updated>
+    </task>
+    <task id="LOCAL-00002" summary="q">
+      <created>1703192361049</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703192361049</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="q" />
+    <option name="LAST_COMMIT_MESSAGE" value="q" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.NoSuchBeanDefinitionException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

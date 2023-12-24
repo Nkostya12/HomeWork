@@ -1,10 +1,11 @@
-package com.example.contacts;
+package com.example.contacts.service;
 
-import org.springframework.stereotype.Component;
+
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
-@Component
+@Service
 public class BockCheckConsole {
     String er = "проверьте порядок ввода ";
 
