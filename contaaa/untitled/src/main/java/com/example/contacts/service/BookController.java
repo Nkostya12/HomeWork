@@ -7,7 +7,6 @@ import com.example.contacts.data.DataContacts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,10 +15,6 @@ import java.util.List;
 @Service
 public class BookController {
 
-
-
-    @Value("${app.BookController.pathInit}")
-    private String pathInit;
 
 
     private DataContacts dataContacts;
@@ -58,7 +53,8 @@ public class BookController {
         }
     }
 
-    public void init() {
+
+    public void init(String pathInit) {
         if (pathInit != null) {
             try {
                 List<String> files = Files.readAllLines(Path.of(pathInit));

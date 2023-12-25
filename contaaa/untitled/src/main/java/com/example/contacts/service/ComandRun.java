@@ -1,6 +1,7 @@
 package com.example.contacts.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -8,8 +9,8 @@ import java.util.Scanner;
 @Component
 public class ComandRun {
 
-//            BookController controller = context.getBean(BookController.class);
-//        BockCheckConsole checker = context.getBean(BockCheckConsole.class);
+    @Value("${app.BookController.pathInit}")
+    private String pathInit;
 
     private BookController controller;
     private BockCheckConsole checker;
@@ -25,10 +26,12 @@ public class ComandRun {
 
         System.out.println("добро пожаловать введите команду или help");
 
-        controller.init();
+       if (!pathInit.equals("null")){
+           controller.init(pathInit);
+       }
 
 
-        for (; ; ) {
+        for (;;) {
 
             Scanner console = new Scanner(System.in);
 
@@ -65,8 +68,8 @@ public class ComandRun {
                         System.out.println(controller.addNewContact(line));
                         break;
                     }
-
             }
+
         }
 
     }
