@@ -33,6 +33,7 @@ public class CommandSevece {
             listStudent.add(new Student(1, "ivan", "ivanov", 22));
             listStudent.add(new Student(2, "sidor", "sidorov", 29));
             listStudent.add(new Student(3, "anton", "antonov", 40));
+            publisher.publishEvent(new StudentEvent(listStudent, TypeEventStudent.LIST_READY));
         }
 
     }
@@ -63,7 +64,7 @@ public class CommandSevece {
     @ShellMethod
     public String clean() {
         listStudent.clear();
-        publisher.publishEvent(new StudentEvent(null, TypeEventStudent.DELETE));
+        publisher.publishEvent(new StudentEvent(null, TypeEventStudent.CLEAR));
         return listStudent.toString();
     }
 
